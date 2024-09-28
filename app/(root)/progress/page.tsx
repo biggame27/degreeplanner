@@ -1,11 +1,11 @@
 import React from 'react'
 
-const Current = () => {
+const Progress = () => {
   return (
     <div>
-      current
+      progress
     </div>
   )
 }
 
-export default Current;
+export default Progress
