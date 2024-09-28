@@ -19,10 +19,11 @@ const Sidebar = ({ children } : {children:React.ReactNode}) => {
 
                     </div>
 
-                    <ul className="flex-1 px-3">
+                    <ul className="flex-1 px-6">
                         <SidebarItem icon={<House size={20} />} text="Home" active={path=="/"} link={"/"} />
-                        <SidebarItem icon={<Check size={20} />} text="Completed" active={path=="/completed"} link={"/completed"} />
+                        <SidebarItem icon={<Check size={20} />} text="Progress" active={path=="/progress"} link={"/progress"} />
                         <SidebarItem icon={<Calculator size={20} />} text="GPA Calculator" active={path=="/gpa-calculator"} link={"/gpa-calculator"} />
+                        <SidebarItem icon={<Calculator size={20} />} text="Advising" active={path=="/advising"} link={"/advising"} />
                     </ul>
 
                     <div className="border-t flex p-3">
