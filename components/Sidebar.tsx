@@ -1,9 +1,9 @@
 "use client"
 import { Calculator, Check, ChevronFirst, House } from "lucide-react";
-import { MoreVertical } from "lucide-react";
 import Image from "next/image";
 import SidebarItem from "./SidebarItem";
 import { usePathname } from "next/navigation";
+import { UserButton } from "@clerk/nextjs";
 
 const Sidebar = ({ children } : {children:React.ReactNode}) => {
     const path = usePathname();
@@ -26,21 +26,16 @@ const Sidebar = ({ children } : {children:React.ReactNode}) => {
                     </ul>
 
                     <div className="border-t flex p-3">
-                    <Image
-                src=""
-                width={150} height={100}
-                alt=""
-                className="w-10 h-10 rounded-md"
-            />
+                        <UserButton />
                         <div className={`
                         flex justify-between  items-center
                         w-52 ml-3 
                         `}>
-                            <div>
+                            {/* <div>
                                 <h4 className="font-semibold">John Doe</h4>
                                 <span className="text-xs text-gray-600">johndoe@gmail.com</span>
                             </div>
-                            <MoreVertical size={20} />
+                            <MoreVertical size={20} /> */}
                         </div>
                     </div>
                 </nav>

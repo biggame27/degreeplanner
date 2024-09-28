@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-const SidebarItem= ({icon, text, active, link} : {icon:any, text:any, active:any, link:string}) => {
+const SidebarItem= ({icon, text, active, link} : {icon:React.ReactNode, text:string, active:boolean, link:string}) => {
     return (
         <Link href={link} className={`
         relative flex items-center py-2 px-3 my-1
