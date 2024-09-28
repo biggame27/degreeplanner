@@ -1,11 +1,13 @@
+import FlowChart from '@/components/FlowChart'
 import React from 'react'
 
 const Progress = () => {
   return (
-    <div>
-      progress
+    <div className="flex flex-row">
+      <FlowChart />
     </div>
   )
 }
 
 export default Progress
+
