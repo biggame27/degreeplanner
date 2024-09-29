@@ -4,38 +4,27 @@ import { ReactFlow, Handle, Position, Edge, MarkerType } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
 // make a color component, 
-let visited = [false];
+let cnt = -1;
 const CustomNode = ({ data }: any) => {  //eslint-disable-line @typescript-eslint/no-explicit-any
-  // data.realCourses
-  const cor = data.label;
-  let green = false;
-  let yellow = false;
-  for (let i = 0; i < data.realCourses.length; i++) {
-    if (visited[i] === true)
-      continue;
-    if (data.realCourses[i].elective === true && data.label.substring(0,3) === "EAE") {
-      // console.log(data.realCourses[i])
-      visited[i] = true;
-      if (data.realCourses[i].planned === true) yellow = true;
-      else green = true;
-    }
-    if (data.realCourses[i].ucc === true && data.label.substring(0,3) === "UCC") {
-      visited[i] = true;
-      if (data.realCourses[i].planned === true) yellow = true;
-      else green = true;
-    }
-    if (green || yellow)
-      break;
-    if (cor.substring(0,data.realCourses[i].department.length) == data.realCourses[i].department && cor.substring(data.realCourses[i].department.length+1, data.realCourses[i].department.length+4) == String(data.realCourses[i].code))
-    {
-      visited[i] = true;
-      if (data.realCourses[i].planned === true) yellow = true;
-      else green = true;
-    }
-  }
-  // console.log(EAEs)
+  
+  // console.log(data.realCourses)
+  cnt +=1
   return (
-    <div style={{ padding: '10px', border: '1px solid #777', borderRadius: '5px', background: `${green ? `#AAFF00` : (yellow ? `#FFEA00` : ``)}`, position: 'relative', width:148}} className={`text-center`}>
+    <div 
+      style={{ 
+        padding: '10px', 
+        border: '1px solid #777', 
+        borderRadius: '5px', 
+        background: data.realCourses[cnt - 1] === "g" 
+          ? '#AAFF00' 
+          : data.realCourses[cnt - 1] === "y" 
+            ? '#FFEA00' 
+            : '', // Default background when neither condition is met
+        position: 'relative', 
+        width: 148 
+      }} 
+      className="text-center"
+    >
       <Handle
         type="target"
         position={Position.Left} // Incoming connection point on the left
@@ -92,8 +81,7 @@ const CustomNode = ({ data }: any) => {  //eslint-disable-line @typescript-eslin
 const FlowChart = ({courses} : {courses:any}) => { //eslint-disable-line @typescript-eslint/no-explicit-any
   // const [nodes, setNodes] = useState<Node[]>([
   const realCourses = courses;
-  visited = new Array(realCourses.length); // Creates an empty array with a length of 5
-  visited.fill(false);
+  cnt=0;
 
   const nodes = [
     { id: '1', position: { x: 150, y: 150 }, data: { label: 'ENGR 102 (2)', realCourses }, type: 'customNode' },
