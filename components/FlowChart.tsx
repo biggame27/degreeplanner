@@ -89,7 +89,7 @@ const CustomNode = ({ data }: any) => {  //eslint-disable-line @typescript-eslin
   );
 };
 // change science, general elective, emphasis elective, cs elective
-const FlowChart = ({courses} : {courses:any}) => {
+const FlowChart = ({courses} : {courses:any}) => { //eslint-disable-line @typescript-eslint/no-explicit-any
   // const [nodes, setNodes] = useState<Node[]>([
   const realCourses = courses;
   visited = new Array(realCourses.length); // Creates an empty array with a length of 5

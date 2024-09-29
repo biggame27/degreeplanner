@@ -1,5 +1,3 @@
-import Link from "next/link";
-
 const SidebarItem = ({ icon, text, active, link }: { icon: React.ReactNode, text: string, active: boolean, link: string }) => {
     return (
         <a href={link} className={`
