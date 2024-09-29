@@ -1,0 +1,339 @@
+[
+    {
+        "department": "CSCE",
+        "course_number": 110,
+        "hours": 4,
+        "prerequisites": [],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 111,
+        "hours": 4,
+        "prerequisites": [],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 120,
+        "hours": 3,
+        "prerequisites": ["ENGR102", "CSCE110", "CSCE111", "CSCE206", "PHYS150"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 121,
+        "hours": 4,
+        "prerequisites": [],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 181,
+        "hours": 1,
+        "prerequisites": [],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 201,
+        "hours": 3,
+        "prerequisites": [],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 206,
+        "hours": 4,
+        "prerequisites": [],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 221,
+        "hours": 4,
+        "prerequisites": ["CSCE120", "CSCE121", "CSCE222"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 222,
+        "hours": 3,
+        "prerequisites": ["MATH142", "MATH147", "MATH151", "MATH171"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 285,
+        "hours": 4,
+        "prerequisites": [],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 289,
+        "hours": 4,
+        "prerequisites": [],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 291,
+        "hours": 4,
+        "prerequisites": ["Freshman or sophomore classification", "Approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 305,
+        "hours": 3,
+        "prerequisites": ["ENGR 102", "CSCE 110", "CSCE 111", "CSCE 206", "MATH 251", "MATH 253", "STAT 211", "Junior or senior classification"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 310,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 221", "Junior or senior classification"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 312,
+        "hours": 4,
+        "prerequisites": ["Grade of C or better in CSCE 221", "Concurrent enrollment allowed"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 313,
+        "hours": 4,
+        "prerequisites": ["Grade of C or better in CSCE 221", "Grade of C or better in CSCE 312", "Concurrent enrollment in CSCE 350/ECEN 350 or ECEN 350/CSCE 350"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 314,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 221", "Concurrent enrollment allowed"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 315,
+        "hours": 3,
+        "prerequisites": ["CSCE 312", "CSCE 314", "CSCE 350/ECEN 350", "Concurrent enrollment in CSCE 313"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 320,
+        "hours": 3,
+        "prerequisites": ["STAT 211", "ECEN 303", "STAT 212", "CSCE 222/ECEN 222", "MATH 304"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 331,
+        "hours": 4,
+        "prerequisites": ["Grade of C or better in CSCE 314", "CSCE 350/ECEN 350", "ECEN 350/CSCE 350", "Grade of C or better or concurrent enrollment in CSCE 313"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 350,
+        "hours": 4,
+        "prerequisites": ["Grade of C or better in ECEN 248", "Junior or senior classification"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 399,
+        "hours": 0,
+        "prerequisites": ["Junior or senior classification"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 402,
+        "hours": 3,
+        "prerequisites": ["Junior or senior classification", "MARA-403"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 410,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 313", "Grade of C or better in CSCE 315 or CSCE 331"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 411,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 221", "CSCE 222/ECEN 222", "Junior or senior classification or approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 412,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 315 or CSCE 331"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 413,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 315 or CSCE 331", "Approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 416,
+        "hours": 3,
+        "prerequisites": ["CSCE 312", "CSCE 350/ECEN 350", "ECEN 350/CSCE 350"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 420,
+        "hours": 3,
+        "prerequisites": ["CSCE 411", "Approval of instructor"],
+        "concurrent": []
+},
+    {
+        "department": "CSCE",
+        "course_number": 421,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in MATH 304", "MATH 311", "MATH 323", "Grade of C or better in STAT 211", "STAT 404 or CSCE 221", "ECEN 303", "CSCE 121", "CSCE 120"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 426,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in ECEN 350", "CSCE 350", "CSCE 312", "junior or senior classification"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 429,
+        "hours": 3,
+        "prerequisites": ["CSCE 315", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 430,
+        "hours": 3,
+        "prerequisites": ["CSCE 411", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 431,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 315", "CSCE 331", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 432,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 315", "CSCE 331"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 433,
+        "hours": 3,
+        "prerequisites": ["CSCE 315", "CSCE 331", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 434,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 315", "CSCE 331"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 435,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 315", "CSCE 331", "junior or senior classification", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 436,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 315", "CSCE 331", "concurrent enrollment", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 438,
+        "hours": 3,
+        "prerequisites": ["CSCE 313", "junior or senior classification", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 439,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 221", "Grade of C or better in ECEN 303", "STAT 211", "STAT 301", "STAT 302", "STAT 303"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 440,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in CSCE 315", "CSCE 331", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 441,
+        "hours": 3,
+        "prerequisites": ["CSCE 221", "junior or senior classification", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 442,
+        "hours": 3,
+        "prerequisites": ["CSCE 221 with a grade of C or better", "MATH 304", "MATH 308", "concurrent enrollment"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 443,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in VIST 386", "CSCE 441", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 444,
+        "hours": 3,
+        "prerequisites": ["CSCE 315", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 445,
+        "hours": 3,
+        "prerequisites": ["CSCE 221", "approval of instructor"],
+        "concurrent": []
+    },
+    {
+        "department": "CSCE",
+        "course_number": 446,
+        "hours": 3,
+        "prerequisites": ["Grade of C or better in VIST 272", "CSCE 221", "CSCE 441"],
+        "concurrent": []
+    }
+    
+]

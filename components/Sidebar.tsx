@@ -5,11 +5,11 @@ import SidebarItem from "./SidebarItem";
 import { usePathname } from "next/navigation";
 import { UserButton } from "@clerk/nextjs";
 
-const Sidebar = () => {
+const Sidebar = ({ children } : {children:React.ReactNode}) => {
     const path = usePathname();
     return (
         <>
-            <aside className="h-screen fixed z-10">
+            <aside className="h-screen fixed">
                 <nav className="h-full flex flex-col bg-white border-r shadow-sm w-64">
                     <div className="p-4 pb-2 flex justify-between items-center">
                         <Image src="https://img.logoipsum.com/243.svg" width={150} height={100} alt="hello" />
@@ -41,6 +41,9 @@ const Sidebar = () => {
                     </div>
                 </nav>
             </aside>
+            <div className="w-full p-10 pl-72 transition-all">
+                {children}
+            </div>
         </>
     )
 }
