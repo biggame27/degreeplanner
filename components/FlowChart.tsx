@@ -21,7 +21,7 @@ const CustomNode = ({ id,data }: any) => {  //eslint-disable-line @typescript-es
         position: 'relative', 
         width: 148 
       }} 
-      className="text-center"
+      className="text-center font-bold"
     >
       <Handle
         type="target"

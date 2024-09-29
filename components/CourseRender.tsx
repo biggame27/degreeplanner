@@ -15,15 +15,20 @@ const gradeToGPA = (grade: string): number => {
   }
 };
 
-const calculateAverageGPA = (courses: any[]): number => { //eslint-disable-line @typescript-eslint/no-explicit-any
+const calculateAverageGPA = (courses: any[]): [number,number, number] => { //eslint-disable-line @typescript-eslint/no-explicit-any
   // Filter courses that are taken and have a valid grade
   const gradedCourses = courses.filter((course) => course.taken && course.grade);
-
+  const plannedCourses = courses.filter((course) => course.planned);
+  let planned = 0;
+  plannedCourses.forEach((course) => {
+      planned += course.hours;
+  })
   if (gradedCourses.length === 0) {
-    return 0;
+    return [0, 0, planned];
   }
   let totalGPAHours = 0;
   let totalHours = 0;
+  
 
   gradedCourses.forEach((course) => {
     const gpa = gradeToGPA(course.grade);
@@ -32,8 +37,10 @@ const calculateAverageGPA = (courses: any[]): number => { //eslint-disable-line 
     totalHours += hours;
   });
 
+
   // Calculate weighted GPA
-  return totalGPAHours / totalHours;
+  const averageGPA = totalGPAHours/totalHours;
+  return [Math.round(averageGPA * 1000) / 1000, totalHours, planned];
 };
 
 const courseRender = (course: any) => { //eslint-disable-line @typescript-eslint/no-explicit-any
@@ -62,7 +69,10 @@ const courseRender = (course: any) => { //eslint-disable-line @typescript-eslint
 const CourseRender = ({courses} : {courses:any}) => { //eslint-disable-line @typescript-eslint/no-explicit-any
 
   const router = useRouter();
-  const averageGPA = calculateAverageGPA(courses);
+  const averageGPAtmp = calculateAverageGPA(courses);
+  const averageGPA = averageGPAtmp[0];
+  const completed = averageGPAtmp[1];
+  const planned = averageGPAtmp[2];
 
   const handleSubmit = async (e: any, taskId: string) => { //eslint-disable-line @typescript-eslint/no-explicit-any
     e.preventDefault();
@@ -72,6 +82,8 @@ const CourseRender = ({courses} : {courses:any}) => { //eslint-disable-line @typ
   }
   return (
     <div className="flex flex-col gap-6">
+      <h1 className="text-3xl bold">Course Information</h1>
+      
       <div className="flex flex-row justify-center items-center border-t pr-9">
         {/* Course Name */}
         <div className="w-36 p-2 border-r">Name</div>
@@ -94,9 +106,11 @@ const CourseRender = ({courses} : {courses:any}) => { //eslint-disable-line @typ
           </Button>
         </form>
       ))}
-      <h1 className="flex justify-center text-3xl">
-        Average GPA: {averageGPA}
-      </h1>
+      <div className="flex justify-center text-3xl flex-col gap-5">
+        <h1>Average GPA: {averageGPA}</h1>
+        <h1>Total Hours: {completed}</h1>
+        <h1>Planned Hours: {planned}</h1>
+      </div>
     </div>
   )
 }

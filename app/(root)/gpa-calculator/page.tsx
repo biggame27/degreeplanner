@@ -7,9 +7,9 @@ const GPACalc = async () => {
   const courses = await getCourses();
   return (
     <>
-    <div className="flex flex-col justify-center items-center gap-5">
-      <CourseAdder />
+    <div className="flex flex-row justify-center items-center gap-5">
       <CourseRender courses={courses} />
+      <CourseAdder />
     </div>
     </>
   )

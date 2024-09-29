@@ -13,9 +13,9 @@ const Sidebar = ({ children, username, email } : {children:React.ReactNode, user
             <aside className="h-screen fixed">
                 <nav className="h-full flex flex-col bg-white border-r shadow-sm w-64">
                     <div className="p-8 pb-5 flex justify-between items-center">
-                        <div className="flex flex-row text-maroon text-xl gap-9 justify-center items-center">
+                        <div className="flex flex-row text-maroon text-xl gap-7 justify-center items-center">
                         <Image src= {imageAsset} width={50} height={50} alt="hello" />
-                        Aggie Atlas
+                        <h1 className="font-bold">Aggie Atlas</h1>
                         </div>
                     </div>
 
