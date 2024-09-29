@@ -28,7 +28,7 @@ const Sidebar = ({ children, username, email } : {children:React.ReactNode, user
 
                     <div className="border-t flex p-3">
                         <UserButton /> 
-                        <div className={`flex justify-between items-center leading-4 overflow-hidden transition-all w-80 ml-3`}>
+                        <div className={`flex justify-between items-center leading-4 overflow-hidden transition-all w-96 ml-3`}>
                         <div>
                             <h4 className="font-semibold">{username}</h4>
                             <span className="text-xs text-gray-600">{email}</span>
