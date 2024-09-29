@@ -4,20 +4,18 @@ import { ReactFlow, Handle, Position, Edge, MarkerType } from '@xyflow/react';
 import '@xyflow/react/dist/style.css';
 
 // make a color component, 
-let cnt = -1;
-const CustomNode = ({ data }: any) => {  //eslint-disable-line @typescript-eslint/no-explicit-any
+const CustomNode = ({ id,data }: any) => {  //eslint-disable-line @typescript-eslint/no-explicit-any
   
   // console.log(data.realCourses)
-  cnt +=1
   return (
     <div 
       style={{ 
         padding: '10px', 
         border: '1px solid #777', 
         borderRadius: '5px', 
-        background: data.realCourses[cnt - 1] === "g" 
+        background: data.realCourses[ Number(id)- 1] === "g" 
           ? '#AAFF00' 
-          : data.realCourses[cnt - 1] === "y" 
+          : data.realCourses[Number(id) - 1] === "y" 
             ? '#FFEA00' 
             : '', // Default background when neither condition is met
         position: 'relative', 
@@ -81,7 +79,6 @@ const CustomNode = ({ data }: any) => {  //eslint-disable-line @typescript-eslin
 const FlowChart = ({courses} : {courses:any}) => { //eslint-disable-line @typescript-eslint/no-explicit-any
   // const [nodes, setNodes] = useState<Node[]>([
   const realCourses = courses;
-  cnt=0;
 
   const nodes = [
     { id: '1', position: { x: 150, y: 150 }, data: { label: 'ENGR 102 (2)', realCourses }, type: 'customNode' },
