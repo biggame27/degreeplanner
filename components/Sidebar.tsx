@@ -15,7 +15,7 @@ const Sidebar = ({ children, username, email } : {children:React.ReactNode, user
                     <div className="p-8 pb-5 flex justify-between items-center">
                         <div className="flex flex-row text-maroon text-xl gap-9 justify-center items-center">
                         <Image src= {imageAsset} width={50} height={50} alt="hello" />
-                        Maroon DP
+                        Aggie Atlas
                         </div>
                     </div>
 
