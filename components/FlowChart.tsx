@@ -10,7 +10,7 @@ import '@xyflow/react/dist/style.css';
 //   position: { x: number, y: number };
 //   data: { label: string };
 // }
-const CustomNode = ({ data }: any) => {  ///eslint-disable-line @typescript-eslint/no-explicit-any
+const CustomNode = ({ data }: any) => {  //eslint-disable-line @typescript-eslint/no-explicit-any
   return (
     <div style={{ padding: '10px', border: '1px solid #777', borderRadius: '5px', background: '#fff', position: 'relative', width:148}} className="text-center">
       <Handle
