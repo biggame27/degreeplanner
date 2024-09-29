@@ -8,9 +8,10 @@ export default function RootLayout({
 }>) {
   return (
     <main>
-        <div className= "flex flex-row">
-            <Sidebar />
-            {children}
+        <div>
+            <Sidebar>
+                {children}
+            </Sidebar>
         </div>
     </main>
   );
