@@ -16,7 +16,7 @@ const Home: React.FC = () => {
           <p className="mt-4 text-lg">
             Use this tool to map out your courses, stay on track, and graduate on time.
           </p>
-          <Link href="/advising">
+          <Link href="/progress">
             <button className="mt-6 px-6 py-3 bg-maroon text-white rounded-lg font-medium hover:bg-maroon-dark">
               Start Planning
             </button>
