@@ -38,10 +38,21 @@ const calculateAverageGPA = (courses: any[]): [number,number, number] => { //esl
   });
 
 
+
   // Calculate weighted GPA
   const averageGPA = totalGPAHours/totalHours;
   return [Math.round(averageGPA * 1000) / 1000, totalHours, planned];
 };
+
+const getTotalCourses = (courses: any[]) : number => {//eslint-disable-line @typescript-eslint/no-explicit-any
+  const gradedCourses = courses.filter((course) => course.taken)
+  let totalHours = 0;
+  gradedCourses.forEach((course) => {
+    totalHours += course.hours;
+  })
+  return totalHours;
+
+}
 
 const courseRender = (course: any) => { //eslint-disable-line @typescript-eslint/no-explicit-any
   return (
@@ -71,7 +82,7 @@ const CourseRender = ({courses} : {courses:any}) => { //eslint-disable-line @typ
   const router = useRouter();
   const averageGPAtmp = calculateAverageGPA(courses);
   const averageGPA = averageGPAtmp[0];
-  const completed = averageGPAtmp[1];
+  const completed = getTotalCourses(courses);
   const planned = averageGPAtmp[2];
 
   const handleSubmit = async (e: any, taskId: string) => { //eslint-disable-line @typescript-eslint/no-explicit-any
