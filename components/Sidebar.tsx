@@ -1,5 +1,5 @@
 "use client"
-import { Calculator, Check, House } from "lucide-react";
+import { Calculator, Check, GraduationCap, House } from "lucide-react";
 import Image from "next/image";
 import SidebarItem from "./SidebarItem";
 import { usePathname } from "next/navigation";
@@ -23,7 +23,7 @@ const Sidebar = ({ children } : {children:React.ReactNode}) => {
                         <SidebarItem icon={<House size={20} />} text="Home" active={path=="/"} link={"/"} />
                         <SidebarItem icon={<Check size={20} />} text="Progress" active={path=="/progress"} link={"/progress"} />
                         <SidebarItem icon={<Calculator size={20} />} text="GPA Calculator" active={path=="/gpa-calculator"} link={"/gpa-calculator"} />
-                        <SidebarItem icon={<Calculator size={20} />} text="Advising" active={path=="/advising"} link={"/advising"} />
+                        <SidebarItem icon={<GraduationCap size={20} />} text="Advising" active={path=="/advising"} link={"/advising"} />
                     </ul>
 
                     <div className="border-t flex p-3">
