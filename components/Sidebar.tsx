@@ -4,6 +4,7 @@ import Image from "next/image";
 import SidebarItem from "./SidebarItem";
 import { usePathname } from "next/navigation";
 import { UserButton } from "@clerk/nextjs";
+import imageAsset from '/assets/maroon_dp_better.png'
 
 const Sidebar = ({ children } : {children:React.ReactNode}) => {
     const path = usePathname();
@@ -12,7 +13,7 @@ const Sidebar = ({ children } : {children:React.ReactNode}) => {
             <aside className="h-screen fixed">
                 <nav className="h-full flex flex-col bg-white border-r shadow-sm w-64">
                     <div className="p-4 pb-2 flex justify-between items-center">
-                        <Image src="https://img.logoipsum.com/243.svg" width={150} height={100} alt="hello" />
+                        <Image src= {imageAsset} width={200} height={400} alt="hello" />
                         <button className = "p-1.5 rounded-lg bg-gray-50 hover:bg-gray-100">
                         <ChevronFirst />  
                         </button>
