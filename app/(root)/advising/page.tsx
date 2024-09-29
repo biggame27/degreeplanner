@@ -32,14 +32,14 @@ const Advising = () => {
         <h1 className="text-3xl font-bold text-center text-gray-800 mb-6">Advising</h1>
         <div className="flex justify-center items-center gap-2 mb-4">
             <input
-                className="flex-grow px-4 py-2 border border-blue-500 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 placeholder-gray-400"
+                className="flex-grow px-4 py-2 border border-maroon rounded-md focus:outline-none focus:ring-2 focus:ring-maroon placeholder-gray-400"
                 value={prompt}
                 type="text"
                 onChange={(e) => setPrompt(e.target.value)}
                 placeholder="Enter a prompt lol.."
             />
             <button
-                className="px-4 py-2 text-white bg-blue-500 rounded-md hover:bg-blue-600 transition duration-300"
+                className="px-4 py-2 text-white bg-maroon-dark rounded-md hover:bg-maroon transition duration-300"
                 onClick={handleGenerate}
             >
                 Click!
