@@ -1,5 +1,5 @@
 "use client"
-import { Calculator, Check, ChevronFirst, House } from "lucide-react";
+import { Calculator, Check, House } from "lucide-react";
 import Image from "next/image";
 import SidebarItem from "./SidebarItem";
 import { usePathname } from "next/navigation";
