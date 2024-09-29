@@ -6,7 +6,7 @@ import { usePathname } from "next/navigation";
 import { UserButton } from "@clerk/nextjs";
 import imageAsset from '/assets/maroon_dp.png'
 
-const Sidebar = ({ children } : {children:React.ReactNode}) => {
+const Sidebar = ({ children, username, email } : {children:React.ReactNode, username:string, email: string}) => {
     const path = usePathname();
     return (
         <>
@@ -27,7 +27,14 @@ const Sidebar = ({ children } : {children:React.ReactNode}) => {
                     </ul>
 
                     <div className="border-t flex p-3">
-                        <UserButton />
+                        <UserButton /> 
+                        <div className={`flex justify-between items-center leading-4 overflow-hidden transition-all w-80 ml-3`}>
+                        <div>
+                            <h4 className="font-semibold">{username}</h4>
+                            <span className="text-xs text-gray-600">{email}</span>
+                        </div>
+                        
+                        </div>
                         <div className={`
                         flex justify-between  items-center
                         w-52 ml-3 
