@@ -1,7 +1,7 @@
 "use client"
 import { SubmitHandler, useForm } from "react-hook-form";
 import { useState, useTransition } from 'react';
-import { sendCourse } from '@/app/api/tasks/route';
+import { sendCourse } from '@/app/api/tasks/courses';
 import { useRouter } from 'next/navigation';
 
 // fields

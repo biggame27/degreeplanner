@@ -1,4 +1,4 @@
-import { getCourses } from '@/app/api/tasks/route'
+import { getCourses } from '@/app/api/tasks/courses'
 import CourseAdder from '@/components/CourseAdder'
 import CourseRender from '@/components/CourseRender'
 import React from 'react'
